@@ -1,0 +1,22 @@
+
+/*
+Podemos definir los colores con el modelo Rojo (red) - Verde (green) - 
+Azul (blue) - alpha (RGBa) usando la notación funcional rgba(). RGBa amplia el
+modelo RGA añadiendo un canal alfa, permitiendo de esta manera especificar la
+opacidad de un color. La a representa opacidad: 0=transparente; 1=opaco;
+*/
+.panel{
+     -fx-background-color: rgba(238,85,85,1) ;
+}
+.botonPrincipal{
+     -fx-background-color: rgba(255,255,255,1) ;
+      -fx-font-weight: bold ;
+}
+.letraJugador{
+    -fx-font-size: 15 px ;    
+    -fx-font-family : CourierNew ;
+    -fx-font-weight: bold ;
+}
+.bold{
+    -fx-font-weight: bold ;
+}

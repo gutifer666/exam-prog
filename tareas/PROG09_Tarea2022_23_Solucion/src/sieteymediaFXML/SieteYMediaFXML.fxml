@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="main" prefHeight="610.0" prefWidth="862.0" styleClass="panel" stylesheets="@estiloCSS.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sieteymediaFXML.SieteYMediaFXMLController">
+    <children>
+        <Button fx:id="comenzar" layoutX="530.0" layoutY="570.0" mnemonicParsing="false" onAction="#comenzarJuego" styleClass="botonPrincipal" text="Comenzar/Reiniciar Juego" />
+        <Button fx:id="salir" layoutX="720.0" layoutY="570.0" mnemonicParsing="false" onAction="#salirJuego" styleClass="botonPrincipal" text="Salir Juego" />
+        <RadioButton fx:id="radioButton1Jug" layoutX="29.0" layoutY="575.0" mnemonicParsing="false" styleClass="bold" text="1 jugador">
+            <toggleGroup>
+                <ToggleGroup fx:id="numJugadores" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="radioButton2Jug" layoutX="127.0" layoutY="574.0" mnemonicParsing="false" styleClass="bold" text="2 jugadores" toggleGroup="$numJugadores" />
+        <RadioButton fx:id="radioButton3Jug" layoutX="237.0" layoutY="574.0" mnemonicParsing="false" styleClass="bold" text="3 jugadores" toggleGroup="$numJugadores" />
+        <RadioButton fx:id="radioButton4Jug" layoutX="349.0" layoutY="574.0" mnemonicParsing="false" styleClass="bold" text="4 jugadores" toggleGroup="$numJugadores" />
+      <Label layoutX="504.0" layoutY="542.0" styleClass="bold" text="Elija el número de jugadores y pulse 'Comenzar:'">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="487.0" fitWidth="655.0" layoutX="190.0" layoutY="60.0" opacity="0.53" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/sieteYMedia.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="panel1" layoutX="21.0" layoutY="14.0" prefHeight="251.0" prefWidth="389.0" style="-fx-background-color: #Ea8313;">
+         <children>
+              <TextArea fx:id="textAreaJug1" editable="false" layoutX="14.0" layoutY="35.0" prefHeight="200.0" prefWidth="355.0">
+               <font>
+                  <Font name="Monospaced Regular" size="12.0" />
+               </font>
+            </TextArea>
+            <ImageView fx:id="win1" fitHeight="174.0" fitWidth="115.0" layoutX="254.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/homer.png" />
+               </image>
+            </ImageView>
+              <Label fx:id="text1" layoutX="14.0" layoutY="7.0" prefHeight="21.0" prefWidth="194.0" styleClass="letraJugador" text="JUGADOR _TXT" />
+            <ImageView fx:id="lose1" fitHeight="157.0" fitWidth="115.0" layoutX="256.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/doh.png" />
+               </image>
+            </ImageView>
+              <Button fx:id="carta1" layoutX="222.0" layoutY="6.0" mnemonicParsing="false" onAction="#accionCarta" prefWidth="70.0" text="Carta" />
+              <Button fx:id="plantar1" layoutX="299.0" layoutY="6.0" mnemonicParsing="false" onAction="#accionPlantar" prefWidth="70.0" text="Plantarse" />
+         </children>
+      </Pane>
+      <Pane fx:id="panel2" layoutX="437.0" layoutY="14.0" prefHeight="251.0" prefWidth="389.0" style="-fx-background-color: #Ea8313;">
+         <children>
+            <Label fx:id="text2" layoutX="14.0" layoutY="7.0" prefHeight="21.0" prefWidth="194.0" styleClass="letraJugador" text="JUGADOR _TXT" />
+            <TextArea fx:id="textAreaJug2" editable="false" layoutX="14.0" layoutY="35.0" prefHeight="200.0" prefWidth="355.0">
+               <font>
+                  <Font name="Monospaced Regular" size="12.0" />
+               </font>
+            </TextArea>
+            <ImageView fx:id="lose2" fitHeight="157.0" fitWidth="115.0" layoutX="256.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/doh.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="win2" fitHeight="174.0" fitWidth="115.0" layoutX="254.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/homer.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="carta2" layoutX="222.0" layoutY="6.0" mnemonicParsing="false" onAction="#accionCarta" prefWidth="70.0" text="Carta" />
+            <Button fx:id="plantar2" layoutX="299.0" layoutY="6.0" mnemonicParsing="false" onAction="#accionPlantar" prefWidth="70.0" text="Plantarse" />
+         </children>
+      </Pane>
+      <Pane fx:id="panel3" layoutX="21.0" layoutY="277.0" prefHeight="251.0" prefWidth="389.0" style="-fx-background-color: #Ea8313;">
+         <children>
+            <Label fx:id="text3" layoutX="14.0" layoutY="7.0" prefHeight="21.0" prefWidth="194.0" styleClass="letraJugador" text="JUGADOR _TXT" />
+            <TextArea fx:id="textAreaJug3" editable="false" layoutX="14.0" layoutY="35.0" prefHeight="200.0" prefWidth="355.0">
+               <font>
+                  <Font name="Monospaced Regular" size="12.0" />
+               </font>
+            </TextArea>
+            <ImageView fx:id="lose3" fitHeight="157.0" fitWidth="115.0" layoutX="257.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/doh.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="win3" fitHeight="174.0" fitWidth="115.0" layoutX="257.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/homer.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="carta3" layoutX="222.0" layoutY="6.0" mnemonicParsing="false" onAction="#accionCarta" prefWidth="70.0" text="Carta" />
+            <Button fx:id="plantar3" layoutX="299.0" layoutY="6.0" mnemonicParsing="false" onAction="#accionPlantar" prefWidth="70.0" text="Plantarse" />
+         </children>
+      </Pane>
+      <Pane fx:id="panel4" layoutX="437.0" layoutY="277.0" prefHeight="251.0" prefWidth="389.0" style="-fx-background-color: #Ea8313;">
+         <children>
+            <Label fx:id="text4" layoutX="14.0" layoutY="7.0" prefHeight="21.0" prefWidth="194.0" styleClass="letraJugador" text="JUGADOR _TXT" />
+            <TextArea fx:id="textAreaJug4" editable="false" layoutX="14.0" layoutY="35.0" prefHeight="200.0" prefWidth="355.0">
+               <font>
+                  <Font name="Monospaced Regular" size="12.0" />
+               </font>
+            </TextArea>
+            <ImageView fx:id="lose4" fitHeight="157.0" fitWidth="115.0" layoutX="256.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/doh.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="win4" fitHeight="174.0" fitWidth="115.0" layoutX="254.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/homer.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="carta4" layoutX="222.0" layoutY="6.0" mnemonicParsing="false" onAction="#accionCarta" prefWidth="70.0" text="Carta" />
+            <Button fx:id="plantar4" layoutX="299.0" layoutY="6.0" mnemonicParsing="false" onAction="#accionPlantar" prefWidth="70.0" text="Plantarse" />
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

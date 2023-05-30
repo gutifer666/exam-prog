@@ -1,0 +1,6 @@
+Francisco Javier Gómez;11111111A;3000;6000
+Julio Iglesias Sánchez;22222222B;7000;8000
+Rafael Martos Sánchez;33333333C;2500;9000
+María Dolores Flores Ruíz;44444444D;500;17000
+María Rosa García García;55555555E;6000;14000
+Sandra Herrero García;66666666F;5000;20000
