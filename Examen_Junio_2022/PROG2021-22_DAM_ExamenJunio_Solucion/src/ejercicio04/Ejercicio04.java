@@ -46,6 +46,7 @@ public class Ejercicio04 {
         } catch (FileNotFoundException e) {
             System.out.println("Error: archivo no encontrado.");
         } catch (IOException e) {
+            // si no se tienen permisos de lectura o escritura o si el archivo está dañado
             System.out.println("Error: fallo en el acceso al archivo: " + e.getMessage());
         } catch (Exception e) {
             System.err.println("Error");
